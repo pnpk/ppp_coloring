@@ -1,5 +1,7 @@
 # ppp_coloring
 
+![image](https://github.com/user-attachments/assets/92cd0d2a-3bd3-4ecd-89d8-01d8028105bd)
+
 ## Overview
 
 With the `ppp` method, you can add color to console output.
