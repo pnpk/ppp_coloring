@@ -1,5 +1,7 @@
 # ppp_coloring
 
+![image](https://github.com/user-attachments/assets/92cd0d2a-3bd3-4ecd-89d8-01d8028105bd)
+
 ## 概要
 
 pppメソッドを使うと、コンソール出力に色を付けることができます。
@@ -7,9 +9,11 @@ pppメソッドを使うと、コンソール出力に色を付けることが�
 デバッグのため、railsログをコンソール出力する際、色が付いていなくてイライラすることはありませんか？
 ppp_coloringは、この問題を解決します。
 
+dockerコンテナで実行している場合や、sidekiqのログを確認する際にも便利に利用できます。
+
 ## インストール方法
 
-```
+```ruby
 gem 'ppp_coloring', '~> 0.1.3'
 ```
 
@@ -37,10 +41,14 @@ end
 
 第２引数は省略可能です。（省略すると :info になります）
 
-```
+```ruby
 ppp "test", :info
 ppp "test", :warn
 ppp "test", :error
 ppp "test", :success
 ```
 
+## 内部的に何をやっているか？
+
+内部的には`ppp`メソッドは、`puts`メソッドを使ってコンソール出力を行っています。
+非常にシンプルです。

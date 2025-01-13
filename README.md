@@ -6,19 +6,22 @@
 
 With the `ppp` method, you can add color to console output.
 
-Are you frustrated when Rails logs appear in the console without colors during debugging? The `ppp_coloring` gem resolves this issue.
+Are you ever frustrated when the Rails log output in your console isn't colored for debugging purposes?
+`ppp_coloring` solves this problem.
 
-## Installation
+It can also be conveniently used when running in Docker containers or when checking Sidekiq logs.
 
-```
+## Installation Method
+
+```ruby
 gem 'ppp_coloring', '~> 0.1.3'
 ```
 
-## Usage with Rails
+## Usage in Rails
 
-If you want to use it as easily as the `p` method, register it in the initializers.
+If you want to use it as easily as the `p` method, register it in initializers.
 
-Create a file named `ppp_initializer.rb` in `api/config/initializers` and register it as follows:
+Create a file like `ppp_initializer.rb` in `api/config/initializers` and register as follows:
 
 ```ruby
 def ppp(*args)
@@ -26,7 +29,7 @@ def ppp(*args)
 end
 ```
 
-If you want to use the output of `ppp` only during debugging, call it like this:
+If you want to use the `ppp` output only during debugging, it is good to call it as follows:
 
 ```ruby
 def ppp(*args)
@@ -34,9 +37,9 @@ def ppp(*args)
 end
 ```
 
-## How to Use
+## Usage
 
-The second argument is optional. (If omitted, it defaults to `:info`.)
+The second argument is optional. (It defaults to `:info` if omitted)
 
 ```ruby
 ppp "test", :info
@@ -44,3 +47,8 @@ ppp "test", :warn
 ppp "test", :error
 ppp "test", :success
 ```
+
+## What is happening internally?
+
+Internally, the `ppp` method outputs to the console using the `puts` method.
+It is very simple.
