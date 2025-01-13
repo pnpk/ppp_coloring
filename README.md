@@ -38,7 +38,7 @@ end
 
 The second argument is optional. (If omitted, it defaults to `:info`.)
 
-```
+```ruby
 ppp "test", :info
 ppp "test", :warn
 ppp "test", :error
