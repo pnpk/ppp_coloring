@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = "pnpk"
   spec.email = "pnpk00@gmail.com"
 
-  spec.summary = "コンソール出力時に文字列を色付けするためのライブラリ"
-  spec.description = "コンソール出力時に文字列を色付けするためのライブラリ"
+  spec.summary = "Library for coloring strings in console output"
+  spec.description = "Library for coloring strings in console output"
   spec.homepage = "https://github.com/pnpk/ppp_coloring"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
